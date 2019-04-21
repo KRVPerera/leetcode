@@ -61,6 +61,14 @@ TEST_CASE( "find in sorted rotated array {}", "[extended binary search]" ) {
     REQUIRE (sol.search(vrc, 3) == -1);
 }
 
+TEST_CASE( "find in sorted rotated array {1}", "[extended binary search]" ) {
+    Solution sol;
+    std::vector<int> vrc {1};
+    CAPTURE(vrc);
+    REQUIRE (sol.search(vrc, 0) == -1);
+    REQUIRE (sol.search(vrc, 3) == -1);
+}
+
 TEST_CASE( "find in sorted rotated array {4,5,6,7,8,1,2,3}", "[extended binary search]" ) {
     Solution sol;
     std::vector<int> vrc {4,5,6,7,8,1,2,3};
