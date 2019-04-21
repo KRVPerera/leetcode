@@ -91,3 +91,13 @@ TEST_CASE( "find pivot sorted rotated array {5,1,2,3,4}", "[findPivot]" ) {
     CAPTURE(vrc);
     REQUIRE (sol.findPivot(vrc) == 0);
 }
+
+
+TEST_CASE( "find pivot sorted rotated array {1,2,3,6,7,9}", "[findPivot]" ) {
+    Solution sol;
+    std::vector<int> vrc {1,2,3,6,7,9};
+    CAPTURE(vrc);
+    REQUIRE (sol.search(vrc, 0) == -1);
+	REQUIRE (sol.findPivot(vrc) == 5);
+}
+
