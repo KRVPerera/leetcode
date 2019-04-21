@@ -63,6 +63,10 @@ int Solution::search(vector<int>& nums, int target) {
     if (nums[arrSeg.right] == target) return arrSeg.right;
     if (nums[arrSeg.getMid()] == target) return arrSeg.getMid();
 
+    if ((arrSeg.right - arrSeg.left) < 3) {
+        return -1;
+    }
+
     if (nums[arrSeg.left] < target) {
         arrSeg.right = pivot - 1; 
     } else {
