@@ -67,6 +67,7 @@ TEST_CASE( "find in sorted rotated array {1}", "[extended binary search]" ) {
     CAPTURE(vrc);
     REQUIRE (sol.search(vrc, 0) == -1);
     REQUIRE (sol.search(vrc, 3) == -1);
+    REQUIRE (sol.findPivot(vrc) == 0);
 }
 
 TEST_CASE( "find in sorted rotated array {4,5,6,7,8,1,2,3}", "[extended binary search]" ) {
