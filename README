@@ -1,0 +1,6 @@
+Trying out leet code coding problems
+### How to build
+    mkdir build
+    cd build
+    cmake ..
+    make -j 3
