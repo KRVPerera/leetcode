@@ -48,11 +48,11 @@ int Solution::search(vector<int>& nums, int target) {
 
     if (nums.empty()) return -1;
     int pivot = findPivot(nums);
-    cout << "pivot : " << pivot << " target : " << target << endl; 
-    for (auto num : nums) {
-        cout << num << " ";
-    }
-    cout << endl;
+    //cout << "pivot : " << pivot << " target : " << target << endl; 
+    //for (auto num : nums) {
+    //    cout << num << " ";
+    //}
+    //cout << endl;
 
     if (nums[pivot] < target) return -1;
     if (nums[pivot] == target) return pivot;
@@ -69,10 +69,7 @@ int Solution::search(vector<int>& nums, int target) {
         arrSeg.left = pivot + 1;
     }
 
-
-    int searchCount = 0;
     while (true) {
-        cout << "searchCount : " << searchCount++ << endl; 
         int left = arrSeg.left;
         int right = arrSeg.right;
         int mid = arrSeg.getMid();
@@ -85,12 +82,10 @@ int Solution::search(vector<int>& nums, int target) {
             return -1;
         }
 
-        if (nums[left] < target) {
-            left = left + 1;
-            right = mid -1;
-        } else {
+        if (nums[mid] < target) {
             left = mid + 1;
-            right = right - 1;
+        } else {
+            right = mid - 1;
         }
 
         arrSeg.left = left;

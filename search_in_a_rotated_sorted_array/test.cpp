@@ -32,6 +32,7 @@ TEST_CASE( "find in sorted rotated array {4,5,6,7,0,1,2}", "[extended binary sea
         REQUIRE (sol.search(vrc, 3) == -1);
         REQUIRE (sol.search(vrc, 8) == -1);
         REQUIRE (sol.search(vrc, 4) == 0);
+        REQUIRE (sol.findPivot(vrc) == 3);
         REQUIRE (sol.search(vrc, 5) == 1);
         REQUIRE (sol.search(vrc, 6) == 2);
         REQUIRE (sol.search(vrc, 7) == 3);
